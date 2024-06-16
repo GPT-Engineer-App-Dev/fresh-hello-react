@@ -16,8 +16,7 @@ const Index = () => {
   const handleDrop = async (event) => {
     if (!draggingVenue) return;
 
-    const map = event.target._map;
-    const { lat, lng } = map.mouseEventToLatLng(event.originalEvent);
+    const { lat, lng } = event.latlng;
 
     try {
       await updateVenue.mutateAsync({
