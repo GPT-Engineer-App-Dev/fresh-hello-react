@@ -6,7 +6,6 @@ import EditProfile from "./pages/EditProfile.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import { SupabaseAuthProvider } from "./integrations/supabase/auth.jsx";
 import { useSupabaseAuth } from "./integrations/supabase/auth.jsx";
-import { Button } from "@chakra-ui/react";
 
 function App() {
   const Navbar = () => {
