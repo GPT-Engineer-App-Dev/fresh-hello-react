@@ -43,19 +43,10 @@ function App() {
       </Flex>
     );
   };
-  const { session, logout } = useSupabaseAuth();
-
   return (
     <SupabaseAuthProvider>
       <Router>
         <Navbar />
-        <div>
-          {session ? (
-            <Button onClick={logout}>Logout</Button>
-          ) : (
-            <Button as="a" href="/login">Login</Button>
-          )}
-        </div>
         <Routes>
           <Route exact path="/" element={<Index />} />
           <Route path="/login" element={<Login />} />
